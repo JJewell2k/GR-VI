@@ -1,0 +1,14 @@
+@import "https://fonts.googleapis.com/css2?family=Megrim&display=swap";
+body{
+  overflow: hidden;
+  margin: 10;
+}
+#word{
+  font-family: Megrim, cursive;
+  font-size: 45vh;
+  position: absolute;
+  margin: 15;
+  /*bottom: 0;*/
+  color: #fc0;
+  -webkit-text-stroke: 0.15vh #c0f;
+}
