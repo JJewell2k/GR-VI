@@ -1,5 +1,5 @@
 {
-  "name": "GRVI",
+  "name": "GR+VI",
   "version": "2022.12.25-07.32.47",
   "license": "MIT",
   "homepage": "https://codepen.io/JJewell2k/pen/vYaNgZb",
@@ -16,7 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.11",
     "del": "^4.1.1",
-    "glob": "^7.1.4",
+    "glob": "^7.2.3",
     "gulp": "^4.0.2",
     "gulp-inject-partials": "^1.0.5",
     "gulp-rename": "^2.0.0",

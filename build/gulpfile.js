@@ -51,25 +51,22 @@ const build = series(clean, copyToDist, ...orderedTasks);
 module.exports = {
   default: build,
   build,
-
   /*
-   * $ npm run serve
-   * A watch task to run a local server with auto-refreshing when files are changed
-   */
-  serve: series(build, () => {
-    const browserSync = require('browser-sync').create();
+    * $ npm Start
+    * The default start task, running these tasks in series and watching for changes.
+    
+  watch([config.srcDir + '**/*.*'], series(build, refresh)); 
+    */
 
-    function refresh(done) {
-      browserSync.reload();
-      done();
-    }
-
-    browserSync.init({
-      server: config.distDir
-    });
-
+  start: series(build, () => {
     watch([config.srcDir + '**/*.*'], series(build, refresh));
   }),
-
+  get start() {
+    return this._start;
+  },
+  set start(value) {
+    this._start = value;
+  },
+  }
   ...taskFns
-};
+;
