@@ -93,4 +93,7 @@ function makeCleanup(opts) {
 
 module.exports = {
   makeTask
+  // makeCleanup
+  // makeRename
+  // makeTask
 };

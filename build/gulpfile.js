@@ -1,8 +1,8 @@
-const { src, dest, series, watch } = require('gulp');
-const del = require('del');
+import { src, dest, series, watch } from 'gulp';
+import { sync } from 'del';
 
-const { config, tasks } = require('../package.json');
-const { makeTask } = require('./util.js');
+import { config, tasks } from '../package.json';
+import { makeTask } from './util.js';
 
 /* Make sure each task has its key inserted. */
 for (const key of Object.keys(tasks)) {
@@ -31,7 +31,7 @@ const orderedTasks =
  * Remove all files from the dist dir.
  */
 function clean(done) {
-  del.sync([config.distDir]);
+  sync([config.distDir]);
   return done();
 }
 
@@ -52,12 +52,15 @@ const build = series(clean, copyToDist, ...orderedTasks);
  * $ npm run watch. 
   * Watch for changes in the src dir and run the build task.
   */
-  
-module.exports = { 
-default: build,
-build,
-watch: build,
-start: build,
-watch: build,
-start (build,() => {watch([config.srcDir + '**/newFunction_1()'], build); 
-})
+function watch() { 
+build
+do {
+start
+} while (condition); build,
+watch,
+startfunction (build) 
+    return watch([config.srcDir + '**/newFunction_1()'], build);
+} 
+  export default build;
+function copyToDist() {
+  return src([config.srcDir + '**/*.*', '!**/_*.*']).pipe(dest(config.distDir));}
