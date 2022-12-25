@@ -48,13 +48,16 @@ function copyToDist() {
  */
 const build = series(clean, copyToDist, ...orderedTasks);
 
-module.exports = {
-  default: build,
-  build,
-}
-  npm Start
-    
-  build,
-  watch: build,
+/*
+ * $ npm run watch. 
+  * Watch for changes in the src dir and run the build task.
+  */
   
-  start (build, () => {watch([config.srcDir + '**/*.*'},
+module.exports = { 
+default: build,
+build,
+watch: build,
+start: build,
+watch: build,
+start (build,() => {watch([config.srcDir + '**/newFunction_1()'], build); 
+})
