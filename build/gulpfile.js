@@ -51,22 +51,10 @@ const build = series(clean, copyToDist, ...orderedTasks);
 module.exports = {
   default: build,
   build,
-  /*
-    * $ npm Start
-    * The default start task, running these tasks in series and watching for changes.
+}
+  npm Start
     
-  watch([config.srcDir + '**/*.*'], series(build, refresh)); 
-    */
-
-  start: series(build, () => {
-    watch([config.srcDir + '**/*.*'], series(build, refresh));
-  }),
-  get start() {
-    return this._start;
-  },
-  set start(value) {
-    this._start = value;
-  },
-  }
-  ...taskFns
-;
+  build,
+  watch: build,
+  
+  start (build, () => {watch([config.srcDir + '**/*.*'},

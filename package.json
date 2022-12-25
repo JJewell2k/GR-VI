@@ -5,7 +5,7 @@
   "homepage": "https://codepen.io/JJewell2k/pen/vYaNgZb",
   "scripts": {
     "build": "gulp -f ./build/gulpfile.js --cwd ./ --continue",
-    "serve": "gulp serve -f ./build/gulpfile.js --cwd ./ --continue",
+    "start": "gulp start -f ./build/gulpfile.js --cwd ./ --continue",
     "task": "gulp -f ./build/gulpfile.js --cwd ./ --continue",
     "tasks": "gulp --tasks-simple -f ./build/gulpfile.js --cwd ./ --continue"
   },
@@ -22,7 +22,7 @@
     "gulp-rename": "^2.0.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^3.11.3"
+    "webpack-dev-server": "^4.11.1"
   },
   "browserslist": [
     "last 5 version"
